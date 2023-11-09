@@ -32,7 +32,9 @@ buttons[0].addEventListener ("click", function(){
 })
 
 function readAloud (){
-let speech = new SpeechSynthesisUtterance (quoteText.innerText + "by" + author.textContent)
+    let words = quoteText.innerText;
+    words = words.replace(/\.$/, '')
+let speech = new SpeechSynthesisUtterance (words + "by" + author.textContent)
     speech.lang = 'en-GB';
     speech.rate = 0.9;
 
