@@ -36,7 +36,7 @@ function readAloud (){
     words = words.replace(/\.$/, '')
 let speech = new SpeechSynthesisUtterance (words + " by" + author.textContent)
     speech.lang = 'en-GB';
-    speech.rate = 0.8;
+    speech.rate = 0.95;
 
     speechSynthesis.speak(speech)
 }
